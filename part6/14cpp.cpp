@@ -6,11 +6,10 @@ using namespace std;
 class Solution {
 public:
     int missingInteger(vector<int>& nums) {
-        int prefixSize = 0;
         int sum = nums[0];
         vector<bool> check = vector<bool>(1276, false);
         check[nums[0]] = true;
-        
+
         for (int i = 1; i < nums.size(); i++){
             if (nums[i] - nums[i-1] == 1){
                 sum += nums[i];
