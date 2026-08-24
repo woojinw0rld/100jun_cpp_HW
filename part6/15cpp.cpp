@@ -10,7 +10,7 @@ public:
         //queryIndices는 s.length보다 작고 0보다 크거나 같음.
         //각 단계마다 바뀌었을 때 연속한 같은 가장 긴 길이를 측정해서 배열로 만든 후 리턴해줌.
 
-        vector<int> result = vector<int>(queryIndices.size(), 0);
+        vector<int> result;
 
         for (int i = 0; i < queryIndices.size(); i++){
             s[queryIndices[i]] = queryCharacters[i];
@@ -27,7 +27,7 @@ public:
                 findMax = max(findMax, temp);
 
             }
-            result[i] = findMax;
+            result.push_back(findMax);
         }
         return result;
 
