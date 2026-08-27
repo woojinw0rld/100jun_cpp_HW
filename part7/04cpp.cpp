@@ -26,7 +26,7 @@ public:
             count = 0;
         }
         for (int i = 0; i < tempS.size(); i++){
-            if (str.empty() || tempS[i] < str.length() || (tempS[i].length() == str.length() && tempS[i] == str)){
+            if (str.empty() || tempS[i].length() < str.length() || (tempS[i].length() == str.length() && tempS[i] < str)){
                 str = tempS[i];
             }
         }
@@ -37,7 +37,7 @@ public:
 };
 
 int main() {
-    string s = "1100111110110011100110100100110000110010110000100100101000010100110110000011011110000010111101100000";
+    string s = "001110101101101111";
     Solution sol;
     cout << endl << sol.shortestBeautifulSubstring(s, 10);
 }
